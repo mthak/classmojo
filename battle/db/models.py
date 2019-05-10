@@ -10,5 +10,6 @@ class Battle(Document):
     Total_Tickets = IntField()
     Jiras = ListField()
     Faq_Updated = IntField()
+    Date_Updated = DateTimeField()
 
 
