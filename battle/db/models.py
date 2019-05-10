@@ -1,4 +1,5 @@
 from mongoengine import *
+from datetime import datetime
 
 class Battle(Document):
 
@@ -10,6 +11,6 @@ class Battle(Document):
     Total_Tickets = IntField()
     Jiras = ListField()
     Faq_Updated = IntField()
-    Date_Updated = DateTimeField()
+    Date_Updated = DateTimeField(default=datetime.now)
 
 

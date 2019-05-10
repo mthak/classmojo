@@ -21,14 +21,15 @@ class dbops():
         my_timezone = timezone('US/Pacific')
         date = my_timezone.localize(date)
         date = date.astimezone(my_timezone)
+        print "date is ", date
 
         battle = Battle(Developer_Issues=payload['Developer_Issues'],
                          Issues_Resolved=payload['Issues_Resolved'],
                          Issues_Pending=payload['Issues_Pending'],
                          Component_Failures=payload['Component_Failures'],
                          Component_Issues=payload['Component_Issues'],
-                         Jiras=payload['Jiras'],
-                         Date_Updated=date
+                         Jiras=payload['Jiras']
+                        # Date_Updated=date
                        )
         battle.save()
 

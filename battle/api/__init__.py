@@ -9,4 +9,4 @@ api = Api(
     version='1.0', description='description',
 )
 
-api.add_namespace(posts_api, path='/postmeta')
+api.add_namespace(posts_api, path='/meta')
